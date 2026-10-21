@@ -31,6 +31,26 @@ const hasRunVideo = fs.existsSync(RUN_VIDEO);
 // The roam clip is the full source take: stand → accelerate → run → decelerate → stand.
 // One roam lasts exactly as long as the clip so every phase is seen exactly once.
 const RUN_CLIP_MS = 10040;
+// 漫游位移曲线：拿片段自己的逐帧位移积分出来的（每 4 帧一个采样点，共 61 个）。
+// 片段开头约 0.9 秒在站立、结尾约 1.5 秒在收步站定，如果按时间线性推进，
+// 就会出现「人站着却横着平移」；用这条曲线把窗口速度和腿部速度对齐。
+const ROAM_PROFILE = [
+  0.0002, 0.0011, 0.0026, 0.0050, 0.0156, 0.0337, 0.0540, 0.0729, 0.0907, 0.1145,
+  0.1365, 0.1590, 0.1796, 0.2028, 0.2226, 0.2451, 0.2653, 0.2881, 0.3074, 0.3297,
+  0.3496, 0.3721, 0.3916, 0.4140, 0.4346, 0.4576, 0.4774, 0.5006, 0.5220, 0.5443,
+  0.5659, 0.5880, 0.6107, 0.6320, 0.6534, 0.6742, 0.6967, 0.7170, 0.7388, 0.7590,
+  0.7814, 0.8011, 0.8224, 0.8420, 0.8639, 0.8840, 0.9070, 0.9297, 0.9513, 0.9683,
+  0.9799, 0.9868, 0.9897, 0.9913, 0.9930, 0.9943, 0.9957, 0.9969, 0.9980, 0.9990,
+  1.0000
+];
+function roamDistanceAt(progress) {
+  if (progress <= 0) return 0;
+  if (progress >= 1) return 1;
+  const at = progress * (ROAM_PROFILE.length - 1);
+  const index = Math.floor(at);
+  const frac = at - index;
+  return ROAM_PROFILE[index] + (ROAM_PROFILE[index + 1] - ROAM_PROFILE[index]) * frac;
+}
 const ANIMATIONS_DIR = path.join(__dirname, '..', 'assets', 'animations');
 // 视频不进仓库（见 README「动画素材」），源码直接运行时可能一段都没有。
 // 核心几段缺失时桌宠会退回静态立绘，托盘里给一条获取入口。
@@ -937,7 +957,7 @@ function scheduleRoam(delay = 12000 + Math.random() * 6000) {
 }
 function beginRoam(targetX, targetY) {
   const [startX, startY] = window.getPosition();
-  roam = { targetX, targetY, startX, startY, startAt: Date.now() };
+  roam = { targetX, targetY, startX, startY, startAt: Date.now(), synced: false };
   const dx = targetX - window.getPosition()[0];
   if (dx !== 0) window.webContents.send('pet:direction', dx < 0 ? -1 : 1);
   window.webContents.send('pet:walking', true);
@@ -1010,6 +1030,17 @@ function tickMotion() {
     }
     window.setPosition(Math.round(x), Math.round(y), false);
   } else if (roam) {
+    // 等渲染端确认漫游片段真的开始播了再起算：视频要 decode 首帧再淡入，
+    // 如果按 pet:walking 的发出时间计时，窗口会比腿早走 200–400ms。
+    if (!roam.synced) {
+      if (Date.now() - roam.startAt < 2500) {
+        window.setPosition(roam.startX, roam.startY, false);
+        return;
+      }
+      // 片段没起来（缺素材/解码失败）也别把桌宠卡在这儿。
+      roam.synced = true;
+      roam.startAt = Date.now();
+    }
     // Pace by wall clock, not by tick count: setInterval(16) drifts under load and
     // would make the walk outlast the clip.
     const progress = Math.min(1, (Date.now() - roam.startAt) / RUN_CLIP_MS);
@@ -1020,8 +1051,9 @@ function tickMotion() {
       clearInterval(physicsTimer);
       scheduleRoam();
     } else {
-      const x2 = roam.startX + (roam.targetX - roam.startX) * progress;
-      const y2 = roam.startY + (roam.targetY - roam.startY) * progress;
+      const distance = roamDistanceAt(progress);
+      const x2 = roam.startX + (roam.targetX - roam.startX) * distance;
+      const y2 = roam.startY + (roam.targetY - roam.startY) * distance;
       window.setPosition(Math.round(x2), Math.round(y2), false);
     }
   } else { clearInterval(physicsTimer); window.webContents.send('pet:walking', false); }
@@ -1075,6 +1107,11 @@ app.whenReady().then(() => {
         scheduleRoam(1200);
       }
     } else if (currentStatus === 'idle' && !roamTimer) scheduleRoam(1200);
+  });
+  ipcMain.on('pet:run-started', () => {
+    if (!roam || roam.synced) return;
+    roam.synced = true;
+    roam.startAt = Date.now();
   });
   ipcMain.handle('pet:get-status', () => currentStatus);
   ipcMain.on('pet:hit-mask', (event, mask) => {

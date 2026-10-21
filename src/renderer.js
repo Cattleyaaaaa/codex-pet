@@ -113,7 +113,7 @@ function resetVideo(video) {
   video.removeAttribute('src');
   video.load();
 }
-function playMotion(key, { loop = false, fallbackMs = 7000, restoreStatus = false, onEnd = null } = {}) {
+function playMotion(key, { loop = false, fallbackMs = 7000, restoreStatus = false, onEnd = null, onStart = null } = {}) {
   const filename = motionClips[key];
   if (!filename) return false;
   const request = ++motionRequest;
@@ -176,6 +176,7 @@ function playMotion(key, { loop = false, fallbackMs = 7000, restoreStatus = fals
             delete outgoing.dataset.current;
             transitionCleanupTimer = setTimeout(() => resetVideo(outgoing), MOTION_FADE_MS + 40);
           }
+          if (onStart) onStart();
         };
         if (incoming.requestVideoFrameCallback) incoming.requestVideoFrameCallback(reveal);
         setTimeout(reveal, 350);
@@ -197,6 +198,8 @@ function playRun() {
   return playMotion('run', {
     loop: false,
     fallbackMs: 11000,
+    // 片段真正开始播的那一刻才让主进程起算，窗口位移和脚步同起同停。
+    onStart: () => window.pet.notifyRunStarted(),
     onEnd: () => {
       if (walkingNow && statusNow === 'idle') playRun();
       else playStatusMotion();

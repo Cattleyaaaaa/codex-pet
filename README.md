@@ -27,11 +27,13 @@
 
 ```powershell
 # ① 完全自动化：克隆 → 装依赖 → 拉素材 → 打包 → 启动
-irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Cattleyaaaaa/codex-pet/main/install.ps1 | iex
 
 # ② 已经 clone 过：装依赖 + 拉素材
 npm run setup      # = npm install && npm run assets:fetch
 ```
+
+素材包地址：[`releases/latest/download/codex-pet-animations.zip`](https://github.com/Cattleyaaaaa/codex-pet/releases/latest/download/codex-pet-animations.zip)（tag `assets-v1`，97.8 MB，SHA-256 `ae049864a4a02baba2b970e8d055ac1119bd179d61d172bbddc1acf418136eea`）。
 
 `assets:fetch` 会先整包下载、逐个校验 SHA-256，全部通过才落盘，中途失败不会留下半新半旧的素材目录。素材地址取自清单里的 `downloadUrl`（指向 `releases/latest/download/codex-pet-animations.zip`），也可以临时用 `-Url` 或环境变量 `CODEXPET_ASSETS_URL` 覆盖。
 

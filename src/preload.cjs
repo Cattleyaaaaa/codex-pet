@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('pet', {
   dragMove: (x, y, t) => ipcRenderer.send('pet:drag-move', x, y, t),
   dragEnd: (x, y, t) => ipcRenderer.invoke('pet:drag-end', x, y, t),
   setMotionBusy: busy => ipcRenderer.send('pet:motion-busy', Boolean(busy)),
+  notifyRunStarted: () => ipcRenderer.send('pet:run-started'),
   setHitMask: mask => ipcRenderer.send('pet:hit-mask', mask),
   setHitBusy: busy => ipcRenderer.send('pet:hit-busy', Boolean(busy)),
   menu: () => ipcRenderer.send('pet:context-menu'),

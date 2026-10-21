@@ -53,3 +53,6 @@ assets/animations-compact/
 assets/animations-original/
 assets/animations.swap/
 dist-assets/
+
+# 本地探针文件
+.dsh-probe.txt
