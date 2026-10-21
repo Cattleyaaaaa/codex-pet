@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小龙娘</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="pet" role="button" tabindex="0" aria-label="小龙娘：点击互动，拖动移动，右键打开菜单">
+    <div id="bubble" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="figure">
+      <img id="character" src="../assets/pet-reference-sleeves-fixed.png" draggable="false" alt="小龙娘">
+      <video id="motion" class="motion-video" aria-hidden="true" playsinline preload="auto"></video>
+      <video id="motion-next" class="motion-video" aria-hidden="true" playsinline preload="auto"></video>
+    </div>
+    <div id="indicator" aria-hidden="true"></div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

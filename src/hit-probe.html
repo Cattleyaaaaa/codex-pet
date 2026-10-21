@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>probe</title><style>video{width:640px;height:576px;background:#ff00ff}</style></head>
+<body>
+<video id="v" muted playsinline autoplay src="../assets/animations/idle-loop.webm"></video>
+<img id="i" src="../assets/pet-reference-sleeves-fixed.png">
+<script>
+const out = [];
+function scan(name, el, sampleCanvas) {
+  try {
+    const c = document.createElement('canvas');
+    c.width = 90; c.height = 103;
+    const ctx = c.getContext('2d', { willReadFrequently: true });
+    ctx.drawImage(el, 0, 0, 90, 103);
+    const data = ctx.getImageData(0, 0, 90, 103).data;
+    let opaque = 0, partial = 0, maxA = 0;
+    for (let i = 3; i < data.length; i += 4) { if (data[i] > 24) opaque++; if (data[i] > 0 && data[i] < 250) partial++; if (data[i] > maxA) maxA = data[i]; }
+    out.push(`${name}: ok opaque=${opaque} partial=${partial} maxAlpha=${maxA}`);
+    if (sampleCanvas) sampleCanvas(c);
+  } catch (error) {
+    out.push(`${name}: ERROR ${error.name} ${error.message}`);
+  }
+}
+const img = document.getElementById('i');
+const vid = document.getElementById('v');
+function run() {
+  scan('image', img, null);
+  scan('video', vid, c => {
+    // 把画布贴回页面方便肉眼确认
+    c.className = 'dbg';
+    document.body.appendChild(c);
+  });
+  console.log('PROBE ' + JSON.stringify(out));
+}
+vid.play().catch(e => out.push('play-error ' + e.message));
+if (vid.requestVideoFrameCallback) vid.requestVideoFrameCallback(() => setTimeout(run, 120));
+else setTimeout(run, 1200);
+</script>
+</body></html>

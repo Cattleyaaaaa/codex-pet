@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小龙娘 · 剩余额度</title>
+  <link rel="stylesheet" href="limits.css">
+</head>
+<body class="above">
+  <div class="panel">
+    <header>
+      <span class="heading">剩余额度</span>
+      <div class="controls">
+        <button id="refresh" type="button" title="刷新额度" aria-label="刷新额度">↻</button>
+        <button id="close" type="button" title="关闭" aria-label="关闭">×</button>
+      </div>
+    </header>
+    <div id="content" aria-live="polite">正在读取…</div>
+  </div>
+  <div class="trail" aria-hidden="true"></div>
+  <script src="limits.js"></script>
+</body>
+</html>

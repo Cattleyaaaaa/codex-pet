@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小龙娘 · 菜单</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <main id="menu-shell" class="menu-shell" aria-label="桌宠菜单">
+    <nav class="menu-primary" aria-label="桌宠功能">
+      <div class="menu-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">小龙娘</span>
+        <span id="status-chip" class="status-chip" data-status="idle">待机</span>
+      </div>
+      <div id="group-list" class="group-list"></div>
+      <div class="primary-footer">
+        <button id="roam" class="menu-row direct-row" type="button">
+          <span class="row-label">自动漫游</span><span id="roam-check" class="check" aria-hidden="true"></span>
+        </button>
+        <button id="hide" class="menu-row direct-row" type="button">隐藏桌宠</button>
+      </div>
+    </nav>
+    <section class="menu-secondary" aria-label="动作分类">
+      <div id="category-list" class="category-list"></div>
+    </section>
+    <section class="menu-tertiary" aria-label="具体动作">
+      <div id="action-list" class="action-list"></div>
+    </section>
+  </main>
+  <script src="menu.js"></script>
+</body>
+</html>

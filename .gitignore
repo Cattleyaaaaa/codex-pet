@@ -1,0 +1,55 @@
+# ── 依赖与虚拟环境（可随时重装） ──
+node_modules/
+.venv/
+.electron-cache/
+.cache/
+__pycache__/
+*.pyc
+
+# ── 构建与打包产物（可重新生成） ──
+dist/
+dist-portable*/
+.tmp-build/
+
+# ── 运行/测试时产生的本地数据 ──
+.smoke-user-data/
+
+# ── 审查、比对、诊断的过程文件（工作稿，删了也能重跑出来） ──
+work/
+
+# ── 提示词与生成说明（不随仓库分发） ──
+prompts/
+
+# ── sandbox / ACL 排查时生成的目录 ──
+acl-recovery/
+
+# ── 生图过程文件（99 MB 的设计稿与中间产物，不随仓库分发） ──
+artifacts/
+
+# ── 日志 ──
+*.log
+npm-debug.log*
+electron-*.log
+
+# ── 本地环境变量 ──
+.env
+.env.local
+.env.*.local
+
+# ── 系统与编辑器杂物 ──
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*.tmp
+
+# ── 动画素材（约 370 MB）：WebM 不进仓库，用 `npm run assets:fetch` 拉取
+#     assets/animations/manifest.json 记录每个文件的大小和 SHA-256，必须入库
+#     原始 MP4（转 WebM 前的中间源）同样不入库 ──
+assets/animations/*.webm
+assets/animations/*.mp4
+#     小体积素材集（npm run assets:compact 生成）与切换时的临时目录 ──
+assets/animations-compact/
+assets/animations-original/
+assets/animations.swap/
+dist-assets/

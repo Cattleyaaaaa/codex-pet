@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-white-pet",
+  "version": "0.1.0",
+  "description": "A draggable anime companion that follows Codex session status on Windows.",
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "Codex 白发桌宠",
+        "shortDescription": "Codex 状态联动桌宠",
+        "longDescription": "启动 Windows 常驻桌宠，并根据 Codex 会话状态切换动作。需要安装桌宠运行时。",
+        "developerName": "CodexPet",
+        "category": "Productivity",
+        "logo": "./assets/pet.png",
+        "composerIcon": "./assets/pet.png"
+      }
+    }
+  }
+}

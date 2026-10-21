@@ -1,0 +1,447 @@
+{
+    "schema":  1,
+    "generatedAt":  "2026-10-21T07:40:58Z",
+    "downloadUrl":  "",
+    "archive":  {
+                    "name":  "codex-pet-animations.zip",
+                    "bytes":  97808218,
+                    "sha256":  "ae049864a4a02baba2b970e8d055ac1119bd179d61d172bbddc1acf418136eea"
+                },
+    "files":  [
+                  {
+                      "name":  "celebrate.webm",
+                      "bytes":  1416631,
+                      "sha256":  "1af7ea1420690a9d96b89795535231dbb5b2280a1bdad20127f99ef594c9ca6d"
+                  },
+                  {
+                      "name":  "cheer.webm",
+                      "bytes":  1126575,
+                      "sha256":  "99aa5561fc3df11fa6a19550cc2e52078c553812514839ef340591cedc3ef918"
+                  },
+                  {
+                      "name":  "done-arms-up-cheer.webm",
+                      "bytes":  2483690,
+                      "sha256":  "aa1739ff8bdf424e8888991de1d2840bd192b54d9aa1cba7a786ef46663a0f0f"
+                  },
+                  {
+                      "name":  "done-fist-cheer.webm",
+                      "bytes":  654623,
+                      "sha256":  "efb2b626dc0082d16d40751a54930b514f637fa6e507abcfff9990835a645abe"
+                  },
+                  {
+                      "name":  "done-open-arms.webm",
+                      "bytes":  2248586,
+                      "sha256":  "16e4fa6dad718de3d8ce53f8db28d9de490f8b3afc1fbf8086cc3b3853a95c1f"
+                  },
+                  {
+                      "name":  "done-present-result.webm",
+                      "bytes":  696768,
+                      "sha256":  "863f549f5e8b96c6eb7c36f93625c3ccfac3488b5a16e51c44ef59ab807c1f4b"
+                  },
+                  {
+                      "name":  "done-proud.webm",
+                      "bytes":  818618,
+                      "sha256":  "cd6872268e3fd57ecbb9ce591f27f74981624b19e0879dc404c4cdad7beb17d8"
+                  },
+                  {
+                      "name":  "done-quiet-cheer.webm",
+                      "bytes":  865391,
+                      "sha256":  "77ed5b82d9a07ce51c5b2290aeecc3bae89116037f97c8cf714963521519583d"
+                  },
+                  {
+                      "name":  "done-relief.webm",
+                      "bytes":  872858,
+                      "sha256":  "3f583857ca09880501df999970b01710196edc1d3209ed4855de9e499bc9cbe3"
+                  },
+                  {
+                      "name":  "done-small-cheer.webm",
+                      "bytes":  617128,
+                      "sha256":  "e470ad3d3c85c198c6fc4def74907202a10aa9aeb0b70237c82be992fa86cb66"
+                  },
+                  {
+                      "name":  "done-thankful.webm",
+                      "bytes":  852269,
+                      "sha256":  "75fc1e8d0b006ffdd8d9fc7fecb979fc005725803739e23fe54d56ed917fb404"
+                  },
+                  {
+                      "name":  "done-thumbs-up.webm",
+                      "bytes":  2053318,
+                      "sha256":  "e084b3ddb623aaf7eba5936af05265d4fa6f8faf6e24ead7626776ecde5d481f"
+                  },
+                  {
+                      "name":  "error-nervous.webm",
+                      "bytes":  686157,
+                      "sha256":  "a406d2b19ceb9fa7d64e81391fe930d018a9e36596761088226122bb31ad4528"
+                  },
+                  {
+                      "name":  "error-oops.webm",
+                      "bytes":  616680,
+                      "sha256":  "40ec94e8bf8727c28a56af1e1a9ce6138e140c0094a923f6ac653e929d924b6d"
+                  },
+                  {
+                      "name":  "error-recover.webm",
+                      "bytes":  1049640,
+                      "sha256":  "0916a69f9a3730135b7044d99117d11801ae4a4ae7f3f325e37dea5848f8217e"
+                  },
+                  {
+                      "name":  "error-refocus.webm",
+                      "bytes":  830764,
+                      "sha256":  "4d195a9baed9d976cc922c8965149263c8f7483da446193e4401ee0f8e868973"
+                  },
+                  {
+                      "name":  "error-surprised.webm",
+                      "bytes":  1045596,
+                      "sha256":  "fdcbe670fbd169dce2ab985aaac7d751bd6e0fa0ed45895285c87cdb2b528148"
+                  },
+                  {
+                      "name":  "error-try-again.webm",
+                      "bytes":  611224,
+                      "sha256":  "c9b65e09c71d1e15c9dab28a0b46b654a565d3d5e0852bfc731ac5f7a0154b1d"
+                  },
+                  {
+                      "name":  "hello.webm",
+                      "bytes":  855704,
+                      "sha256":  "aed62b552095f3b69baa80962a8cd5411f9b0490e795201a7a6cc6ba7ecdcb06"
+                  },
+                  {
+                      "name":  "hello-both-hands.webm",
+                      "bytes":  2096920,
+                      "sha256":  "3aae1c9847a8f4e53bb46d16106d98e0509435b86198c8a78d5ef7126f1f682f"
+                  },
+                  {
+                      "name":  "hello-small-wave.webm",
+                      "bytes":  1894831,
+                      "sha256":  "da0c0ef3cd76a1c1946707b8a86d1851ac9ea5a3e42692dbef63fff1248b1f57"
+                  },
+                  {
+                      "name":  "idle-bow.webm",
+                      "bytes":  1123458,
+                      "sha256":  "7ca3d05209162d4b785bb2c2d4c5b390c0f8ac49cc471a424ee66cd74a247544"
+                  },
+                  {
+                      "name":  "idle-cheek-wave.webm",
+                      "bytes":  828135,
+                      "sha256":  "11d55587f2dd6b6953399bc920ad724512092b588f51cac6db5f368711ce2e9d"
+                  },
+                  {
+                      "name":  "idle-clasp-hope.webm",
+                      "bytes":  2012404,
+                      "sha256":  "dc78417d23826be5aa7351f19e7c6eea6e50f4326f6f8730ed92a1e8a9486b54"
+                  },
+                  {
+                      "name":  "idle-clasp-laugh.webm",
+                      "bytes":  2453806,
+                      "sha256":  "7bcd353a65f4981ba3f465ab2eeeeacf62eb3d35f0d3c960e877a3f59f56f991"
+                  },
+                  {
+                      "name":  "idle-curious-lean.webm",
+                      "bytes":  897516,
+                      "sha256":  "8f65dff9e14aeb296c39b1ab75cca777a809943d66992bab70e561b29e8967f9"
+                  },
+                  {
+                      "name":  "idle-doze.webm",
+                      "bytes":  942682,
+                      "sha256":  "c3fcdf29d638ae5e0498d28b6a91bd16917ab69bd91a9fc5ac54cad6ce44e62c"
+                  },
+                  {
+                      "name":  "idle-dragon-roar.webm",
+                      "bytes":  856836,
+                      "sha256":  "a3903dc36bcaddb35d2a270a0a5ad924de6fda2aa7c88f8d33a2de34fe02b624"
+                  },
+                  {
+                      "name":  "idle-face-touch.webm",
+                      "bytes":  758111,
+                      "sha256":  "32a4be88fc04e476c179a63992aa5c4809e3f72cca2bb37589b93e649e501170"
+                  },
+                  {
+                      "name":  "idle-forehead-touch.webm",
+                      "bytes":  2145630,
+                      "sha256":  "0379b2f7ce7b2a69e900f5c33cf801fea1742d6028978c60b2ccac671c3b21ec"
+                  },
+                  {
+                      "name":  "idle-gentle-nod-loop.webm",
+                      "bytes":  980624,
+                      "sha256":  "c099297cf74a0ae2efb27ae6c908700299daacf75879598b59351f18d33c3046"
+                  },
+                  {
+                      "name":  "idle-hair-fix.webm",
+                      "bytes":  917321,
+                      "sha256":  "93af3ed1ed7c075026f4b9043e18fcb914b1bdc31b71218b0307c56a2da0a514"
+                  },
+                  {
+                      "name":  "idle-hair-tuck.webm",
+                      "bytes":  2106045,
+                      "sha256":  "918340050766524623fbac07c251ede24d0b4faaab2c2ee083b5b4c562ae9624"
+                  },
+                  {
+                      "name":  "idle-headpiece-touch.webm",
+                      "bytes":  781025,
+                      "sha256":  "1faa5c2f74bcd0e01236378529f0e18cff46ce8613515e6ba5647f071984fcb4"
+                  },
+                  {
+                      "name":  "idle-hop.webm",
+                      "bytes":  1308606,
+                      "sha256":  "078bd3076c09f5784e6ddf40e4edc28b43590b06b97b882601fa6191cadcfaa9"
+                  },
+                  {
+                      "name":  "idle-hum-loop.webm",
+                      "bytes":  1198041,
+                      "sha256":  "cd72ac6671ddab47216ebfcd801f0737398d1141988b4b626805e38df6c63ba2"
+                  },
+                  {
+                      "name":  "idle-laugh.webm",
+                      "bytes":  843484,
+                      "sha256":  "65069be850a0648fc7ca011911e115a55ab746ff14d5519e3b73c4bcbe05511e"
+                  },
+                  {
+                      "name":  "idle-lookaround-loop.webm",
+                      "bytes":  1033632,
+                      "sha256":  "33e5de0f9af92d38aab4786fa48c87b2678ba485ead9b46be34f0862d5dac12c"
+                  },
+                  {
+                      "name":  "idle-loop.webm",
+                      "bytes":  831147,
+                      "sha256":  "970d3e98a0dea9bc638e749db76a94434d2ae651a995429212e10b991c58c82b"
+                  },
+                  {
+                      "name":  "idle-mini-dance.webm",
+                      "bytes":  1135027,
+                      "sha256":  "6e470dadc79658b5790c013f6b7dc4ef7f2e156433c8d1aae351a86349034265"
+                  },
+                  {
+                      "name":  "idle-peace-sign.webm",
+                      "bytes":  2286385,
+                      "sha256":  "d1a8620a0e417df32494686ea9806568434e29c2a25b23830732e24b2efd4f34"
+                  },
+                  {
+                      "name":  "idle-pout.webm",
+                      "bytes":  659821,
+                      "sha256":  "2d0d6ac04f6a29c581c6e2ab350ffbd6c608309c1b440bd13e8701955b285ea0"
+                  },
+                  {
+                      "name":  "idle-shy.webm",
+                      "bytes":  819385,
+                      "sha256":  "38901ead439f11616f6019ce844fab3d9d2fe19bcdde9365b5887f65c0421c13"
+                  },
+                  {
+                      "name":  "idle-shy-tilt.webm",
+                      "bytes":  2176579,
+                      "sha256":  "0dbd4cfcb9d0b34eef5349314d825595e2533dcc15b4e33b5ff39003c5470060"
+                  },
+                  {
+                      "name":  "idle-sleeve-show.webm",
+                      "bytes":  901840,
+                      "sha256":  "0591e7895b2115932d7220677b5e1cfccea90ea344242c48f51af179bfe1a83e"
+                  },
+                  {
+                      "name":  "idle-small-bow.webm",
+                      "bytes":  610517,
+                      "sha256":  "ad8598866d37d7f7203802398b45c194c6ea81f940d21c42c98e20e2c4a3c58f"
+                  },
+                  {
+                      "name":  "idle-sneeze.webm",
+                      "bytes":  897965,
+                      "sha256":  "2983a5140db7487bf8cb826ba6866e3bbe134e7b4badceb7e92f08a695ce3aee"
+                  },
+                  {
+                      "name":  "idle-soft-blink.webm",
+                      "bytes":  775202,
+                      "sha256":  "d249ae40ca590979fe053aacdc674f50f7afb7e4611e9757900de13c83f82d1a"
+                  },
+                  {
+                      "name":  "idle-sparkle-smile.webm",
+                      "bytes":  889646,
+                      "sha256":  "17dd94818f3faf69507b99d09e20d0235f1cc8d6b4866763a72a7d5809e0b62f"
+                  },
+                  {
+                      "name":  "idle-step-in-place.webm",
+                      "bytes":  1167030,
+                      "sha256":  "b03c8a5d6443dc06801c55ceba55f6f03a1e7bbaf9e1b94e2890496c03d23bdc"
+                  },
+                  {
+                      "name":  "idle-stretch.webm",
+                      "bytes":  2100206,
+                      "sha256":  "aeed827795ad349a602c8ea4521d7917d991e19882b702601df7bba9370448ec"
+                  },
+                  {
+                      "name":  "idle-tail-curl-loop.webm",
+                      "bytes":  1131439,
+                      "sha256":  "c28b6789f7579b6d05c5a077161b95d1ee26e1743d9b3d58b576dcf67d3b9965"
+                  },
+                  {
+                      "name":  "idle-tail-play.webm",
+                      "bytes":  942526,
+                      "sha256":  "89794981b6160a1c4f613e400b943a8047d609a04b5b09fae87c19a1714743d0"
+                  },
+                  {
+                      "name":  "idle-tail-startle.webm",
+                      "bytes":  827924,
+                      "sha256":  "b124959c36a4964b7e10fabdf8bfd36fd2a15ac2793672be227324822674adab"
+                  },
+                  {
+                      "name":  "idle-tail-sway.webm",
+                      "bytes":  1963241,
+                      "sha256":  "86014501fe54528ff5612c6fb1013bf8aa2bbcd13eafb4497e1dfd8e67d76af1"
+                  },
+                  {
+                      "name":  "idle-tiptoe.webm",
+                      "bytes":  1256801,
+                      "sha256":  "040dca6327c0d18054bdd06a40334a1db01952b661448e9cd2a1639ad17130e3"
+                  },
+                  {
+                      "name":  "idle-wave-long.webm",
+                      "bytes":  1268583,
+                      "sha256":  "884ba8caca67ee16efd5b05d24f253d16a156951033d678627366a48814195e0"
+                  },
+                  {
+                      "name":  "idle-wave-smile.webm",
+                      "bytes":  735032,
+                      "sha256":  "45fc6b3b602ee150cabc5b65bb65398d1f082aeed73f33fb36a09e460610cec5"
+                  },
+                  {
+                      "name":  "idle-wing-flutter.webm",
+                      "bytes":  943510,
+                      "sha256":  "fc445d995550cc9f92907b9610140deedd53675fa33e3f32fe97248642d019f6"
+                  },
+                  {
+                      "name":  "idle-wing-flutter-alt.webm",
+                      "bytes":  864695,
+                      "sha256":  "fbe25f7826f0d2e06b141dc7eee0830a46238602618a133c5a2a334421aac58f"
+                  },
+                  {
+                      "name":  "idle-wing-open.webm",
+                      "bytes":  806585,
+                      "sha256":  "67d72889b2919a5d5d2d136840f0d87ea61fb47b332ccff0bf45c55af6a6164d"
+                  },
+                  {
+                      "name":  "run-loop.webm",
+                      "bytes":  3105879,
+                      "sha256":  "d4a2b31b518f1c0b98bbe8c5f46c27d046d77939225f73c6c3fa6dbea5dc8eca"
+                  },
+                  {
+                      "name":  "sleep-loop.webm",
+                      "bytes":  936936,
+                      "sha256":  "05dc52fabd9063f90942ad6d10bcd64031c6795a0ba4bf668fedb1c58aa18c00"
+                  },
+                  {
+                      "name":  "thinking-loop.webm",
+                      "bytes":  764609,
+                      "sha256":  "462a3a2ea71ccde4b8b941255eab6b67bf0a66aef4c1daaa002d6c8592b0c622"
+                  },
+                  {
+                      "name":  "waiting-calm-breath.webm",
+                      "bytes":  591571,
+                      "sha256":  "51831c898c58c20b69c845747b9602715db72d53378c7b0fb672b385a5f23737"
+                  },
+                  {
+                      "name":  "waiting-foot-tap-loop.webm",
+                      "bytes":  976736,
+                      "sha256":  "8785e9106a86a7347e24b8d722870585ffd6703bd626bea8e932dec38075c510"
+                  },
+                  {
+                      "name":  "waiting-hopeful-loop.webm",
+                      "bytes":  992614,
+                      "sha256":  "92a9db2b89938e27c07c50a7a028aad5b76eba62ee363c85216cc9303a337851"
+                  },
+                  {
+                      "name":  "waiting-lookaround-loop.webm",
+                      "bytes":  1011714,
+                      "sha256":  "77cefabfb49e41ab44017c919cb82b0419548d086b41cfbb2ee86099766269a4"
+                  },
+                  {
+                      "name":  "waiting-loop.webm",
+                      "bytes":  1033462,
+                      "sha256":  "53af87b2fa2b90aa3d69cc062589a61137cf411dedd073531a3956f1c77f8964"
+                  },
+                  {
+                      "name":  "waiting-open-hands.webm",
+                      "bytes":  743813,
+                      "sha256":  "858a8f8417d6d7252dcb21a7f052ea25662933d8f203635d1b93472d4bd7e8b0"
+                  },
+                  {
+                      "name":  "waiting-question.webm",
+                      "bytes":  924544,
+                      "sha256":  "4e99208a6794883d6c7ccdabcec1124d00da79729c6c18dc61d69d551769e9bf"
+                  },
+                  {
+                      "name":  "waiting-reassure.webm",
+                      "bytes":  864915,
+                      "sha256":  "6cec67f41963aa8657c66950c59b7cac003aa26b442d872d40878a3f0507ae8e"
+                  },
+                  {
+                      "name":  "waiting-reassure-gesture.webm",
+                      "bytes":  707662,
+                      "sha256":  "0b131ddf8d7b87b49c05c2bff826fc43a2f00e5ef6326b59ea4f7b50b387cb23"
+                  },
+                  {
+                      "name":  "waiting-small-gesture.webm",
+                      "bytes":  624597,
+                      "sha256":  "1554789b41bb1ea4d3aa41f34b7842ae5abe4e5b8779040cf0c2e7227b5b0bbe"
+                  },
+                  {
+                      "name":  "working-chin-think.webm",
+                      "bytes":  733106,
+                      "sha256":  "1c9738b0d81d557e50c01f9380e4c956adfccbbb7c9a5efeb0fe337d327faf3d"
+                  },
+                  {
+                      "name":  "working-compare-loop.webm",
+                      "bytes":  1032309,
+                      "sha256":  "abe241d277a7de909dd55a28bafa968da0040d034f03b07b6b6fd658db531e51"
+                  },
+                  {
+                      "name":  "working-doodle.webm",
+                      "bytes":  2042112,
+                      "sha256":  "66f03d02789bcba94081d177fadb962514a601d0d13729a0eb040c3592f8fee2"
+                  },
+                  {
+                      "name":  "working-focus-loop.webm",
+                      "bytes":  825663,
+                      "sha256":  "28dc1a47afbf1c984a3e3fa59da47b75ae4953960881248bc0a35605a4dba333"
+                  },
+                  {
+                      "name":  "working-glance.webm",
+                      "bytes":  718557,
+                      "sha256":  "3e6c5d2214e93cdb2e61debeeb10fca3372340a4a566b8196ed223c37141f6ab"
+                  },
+                  {
+                      "name":  "working-idea-loop.webm",
+                      "bytes":  682304,
+                      "sha256":  "f6b20bb42361138673fb155d3d430ba466adedf3dfcad33429c8c4e2f607cfb0"
+                  },
+                  {
+                      "name":  "working-keyboard-loop.webm",
+                      "bytes":  785109,
+                      "sha256":  "7509f4de398ecc8b36fdcf6df5f7bfee05fc232bc645e40b66eb038a9441e183"
+                  },
+                  {
+                      "name":  "working-loop.webm",
+                      "bytes":  845784,
+                      "sha256":  "e6de3893f10f25e293fa56aadcc827d86c09879c16fa725ced13ab526c2cc3c2"
+                  },
+                  {
+                      "name":  "working-nod-loop.webm",
+                      "bytes":  875450,
+                      "sha256":  "307c746b3365c96c1d07466daed1d0ff3d5340c298f8ec66e9263832762246a3"
+                  },
+                  {
+                      "name":  "working-organize.webm",
+                      "bytes":  2104562,
+                      "sha256":  "da0f80f9649047fc3f2b6662bb63432d19d6814175059b681f7bf756136b4b99"
+                  },
+                  {
+                      "name":  "working-pause-loop.webm",
+                      "bytes":  902457,
+                      "sha256":  "dcc84282095e8477f9a50e8a85b52b8612d029c1419c10aa8988190f2c85bf0d"
+                  },
+                  {
+                      "name":  "working-think-gesture.webm",
+                      "bytes":  741983,
+                      "sha256":  "ef5d08bc16b15381ed86ec48b36f055ebe0dfee2f33f60d7fcaf12a5c74d42c3"
+                  },
+                  {
+                      "name":  "working-trace-idea.webm",
+                      "bytes":  642134,
+                      "sha256":  "5ce6f64b13560069a036a9976b5d64f98729ea0def9b628a377d5ad929e57436"
+                  }
+              ]
+}

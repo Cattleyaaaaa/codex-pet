@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小龙娘设置</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <main class="settings-window">
+    <header class="titlebar"><span>设置</span><button id="close" class="close" aria-label="关闭">×</button></header>
+    <div class="layout">
+      <nav class="sidebar"><div class="nav-item active"><span class="nav-icon">☷</span>桌宠配置</div></nav>
+      <section class="content">
+        <h1>桌宠配置</h1>
+        <p class="intro">调整拖动手感，以及小龙娘是否随系统一起启动。</p>
+        <section class="card">
+          <h2>物理参数 <span class="help" title="这些设置控制拖动手感与释放后的运动">?</span></h2>
+          <div class="fields">
+            <label>重力 gravity<input id="gravity" type="number" min="0" max="3000" step="50" value="1400"><small>数值越大，松手后下落越快。</small></label>
+            <label>弹性 restitution<input id="restitution" type="number" min="0" max="1" step="0.01" value="0.78"><small>控制碰到屏幕边缘后的反弹强度。</small></label>
+            <label>地面摩擦 groundFriction<input id="groundFriction" type="number" min="0" max="8" step="0.1" value="2.5"><small>数值越大，落地后横向滑动越快停止。</small></label>
+            <label>总力度 throwPower<input id="throwPower" type="number" min="0.05" max="2" step="0.05" value="1"><small>弹簧跟手与甩出初速的整体倍率，必须大于 0；1 = 默认，越大越跟手、甩得越猛。</small></label>
+          </div>
+          <label class="check-row"><input id="ceilingBounce" type="checkbox" checked><span>顶部碰撞反弹 ceilingBounce</span></label>
+        </section>
+        <div class="actions"><button id="save" class="primary">保存设置</button><button id="test" class="secondary">测试弹跳</button><span id="message" aria-live="polite"></span></div>
+        <p class="note">窗口会在屏幕边缘反弹；拖动时仍可把小龙娘移到屏幕可见区域内。改动即时保存，并用于之后的拖动。</p>
+        <section class="card" style="margin-top: 18px;">
+          <h2>开机启动 <span class="help" title="写入 Windows 的登录启动项，只影响当前用户">?</span></h2>
+          <label class="check-row" style="margin-top: 4px;"><input id="autoStart" type="checkbox"><span>开机自动启动</span></label>
+          <small>勾选后，登录 Windows 时小龙娘会自动出现（同一时间只会有一个实例）；取消勾选则只在手动打开时出现。源码运行时注册的是 Electron 可执行文件，安装版注册的是小龙娘自己。</small>
+        </section>
+      </section>
+    </div>
+  </main>
+  <script src="settings.js"></script>
+</body>
+</html>

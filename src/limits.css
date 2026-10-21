@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: transparent; }
+body { font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif; color: #40364f; user-select: none; }
+.panel { position: absolute; top: 5px; left: 7px; right: 7px; bottom: 27px; padding: 14px 21px 12px; border: 2px solid #7966a0; border-radius: 35px; background: #fffdfd; box-shadow: 0 8px 22px #3e315c24; }
+body.below .panel { top: 27px; bottom: 5px; }
+body.side .panel { top: 5px; bottom: 5px; }
+header { position: relative; height: 26px; display: flex; align-items: center; justify-content: center; margin-bottom: 3px; }
+.heading { font-size: 16px; font-weight: 700; color: #615476; letter-spacing: .03em; }
+.controls { position: absolute; right: 0; top: -3px; display: flex; gap: 3px; }
+.controls button { width: 25px; height: 25px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #5f5374; font: 22px/25px "Microsoft YaHei UI", sans-serif; cursor: pointer; }
+.controls button:hover, .controls button:focus-visible { background: #f0eafa; outline: none; }
+#content { min-height: 124px; }
+.quota { margin: 4px 0 10px; }
+.quota-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.quota-label { color: #51495d; font-size: 15px; }
+.quota-percent { color: #695687; font-size: 25px; line-height: 1; font-weight: 750; font-variant-numeric: tabular-nums; }
+.bar { height: 8px; margin-top: 6px; border-radius: 99px; background: #eae4f1; overflow: hidden; }
+.bar-fill { height: 100%; width: 0; border-radius: inherit; background: #8877ab; transition: width .3s ease; }
+.reset { margin-top: 4px; color: #706879; font-size: 12px; font-variant-numeric: tabular-nums; }
+.message { display: grid; place-items: center; min-height: 117px; color: #706879; font-size: 14px; text-align: center; }
+.trail::before, .trail::after { content: ""; position: absolute; display: block; border: 2px solid #7966a0; background: #fffdfd; border-radius: 50%; }
+.above .trail::before { width: 16px; height: 12px; bottom: 6px; left: 52%; }
+.above .trail::after { width: 8px; height: 7px; bottom: 0; left: 56%; }
+.below .trail::before { width: 16px; height: 12px; top: 8px; left: 52%; }
+.below .trail::after { width: 8px; height: 7px; top: 0; left: 56%; }
+.side .trail { display: none; }
