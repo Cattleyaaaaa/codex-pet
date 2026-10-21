@@ -8,10 +8,14 @@
 </p>
 
 <p align="center">
-  <img src="assets/pet.png" width="220" alt="小龙娘">
+  <img src="assets/pet-hero.png" width="220" alt="小龙娘">
 </p>
 
 > 一只住在 Windows 桌面上的白发小龙少女桌宠：透明置顶、拖动投掷、自动漫游、右键点播动作，并通过 Codex hooks 显示工作、等待、完成、报错状态和本轮 Token 用量。
+
+<p align="center">
+  <sub>形象立绘由 Codex 生成 · 动作动画由豆包 AI 生成</sub>
+</p>
 
 ## 系统要求
 
@@ -265,13 +269,19 @@ npm run assets:switch -- -Set original    # 退回原版
 
 切换是把两个文件夹改名对调（`assets/animations` ↔ `assets/animations-original`），不复制、不重编码，两个方向都是瞬间完成。compact 生效时 `assets:compact` 会拒绝运行，避免把已经压过的文件再压一遍。`manifest.json` 跟着文件夹一起走，要发布哪一套就用哪一套重新 `npm run assets:pack`。
 
+## 🎨 美术与素材来源
+
+- **形象立绘**：由 **Codex** 生成，抠像后存放在 `assets/pet-hero.png`（README 顶部展示）和 `assets/pet.png`（托盘图标与插件 logo）。
+- **动作动画**：由 **豆包 AI** 生成绿幕原片，再经 `scripts/key-green-video.py` 抠像、裁切并转成 VP9 Alpha WebM。
+
+两组素材均为生成内容，不含第三方画师作品。
+
 ## 🚧 现阶段边界
 
 - 当前生成素材为 1280×720 绿幕原片，抠像后裁成 800×720 的透明 WebM；边缘和画质仍受原片限制。
 - 当前没有 dsh-pet 那样的大型动画库、宠物包、聊天记忆或多桌宠实例。
 - 窗口目前是 360×410（顶部留出约 50px 透明气泡空间），角色周围的透明区域仍可能挡住下方窗口的点击。
 - 目前只支持 Windows；macOS/Linux 没有构建产物。
-- 角色图来自本次对话生成的形象，文件在 `assets/pet.png`。
 
 ## 🙏 参考
 
