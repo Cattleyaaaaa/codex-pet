@@ -8,7 +8,7 @@
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 
-$Repo = 'OWNER/REPO'
+$Repo = 'Cattleyaaaaa/codex-pet'
 if ($env:CODEXPET_REPO) { $Repo = $env:CODEXPET_REPO }
 if ($Repo -eq 'OWNER/REPO') {
   throw '请先把 install.ps1 里的 OWNER/REPO 换成你自己的仓库，或设置 $env:CODEXPET_REPO="owner/repo"'

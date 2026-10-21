@@ -24,7 +24,6 @@ Write-Host ''
 # 1) 重新生成清单 + 素材包，并把 downloadUrl 写成 latest 直链（这个地址以后都不变）
 if (-not $SkipPack) {
   & (Join-Path $PSScriptRoot 'package-animations.ps1') -DownloadUrl $assetUrl
-  if ($LASTEXITCODE -ne 0) { throw '打包素材失败' }
 }
 if (-not (Test-Path -LiteralPath $zipPath)) { throw "找不到素材包：$zipPath" }
 
