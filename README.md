@@ -275,4 +275,3 @@ npm run assets:switch -- -Set original    # 退回原版
 
 - 交互设计、拖动/抛掷物理和 README 结构参考 [dsh-pet](https://github.com/PC2005-cloud/dsh-pet)。
 - Codex 状态接入使用 [Codex hooks](https://learn.chatgpt.com/docs/hooks)。
-- 本项目没有包含 dsh-pet 的动画、视频或提示词素材。
